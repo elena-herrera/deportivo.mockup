@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800;900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error-container": "#ffdad6",
+              "outline": "#727973",
+              "surface-dim": "#dcdad2",
+              "on-secondary-fixed-variant": "#623f18",
+              "error": "#ba1a1a",
+              "on-tertiary-container": "#82c19f",
+              "on-tertiary": "#ffffff",
+              "on-surface-variant": "#424843",
+              "surface-container-highest": "#e4e2db",
+              "on-tertiary-fixed-variant": "#0c5136",
+              "surface-container": "#f0eee6",
+              "secondary-fixed-dim": "#f0bd8b",
+              "on-secondary": "#ffffff",
+              "on-background": "#1b1c17",
+              "surface-container-high": "#eae8e0",
+              "tertiary": "#003723",
+              "on-surface": "#1b1c17",
+              "on-primary-fixed": "#00201a",
+              "surface-tint": "#43655c",
+              "primary-container": "#2a4c43",
+              "on-tertiary-fixed": "#002113",
+              "on-secondary-container": "#7a532a",
+              "on-error": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed": "#b0f1cc",
+              "on-primary": "#ffffff",
+              "background": "#fbf9f1",
+              "surface-container-low": "#f6f4ec",
+              "on-primary-container": "#97bbb0",
+              "on-secondary-fixed": "#2c1600",
+              "surface-bright": "#fbf9f1",
+              "tertiary-fixed-dim": "#94d4b1",
+              "primary": "#377b6b",
+              "outline-variant": "#c2c8c1",
+              "secondary-container": "#ffca98",
+              "secondary": "#7d562d",
+              "primary-fixed": "#c5eadf",
+              "inverse-on-surface": "#f3f1e9",
+              "tertiary-container": "#0a5036",
+              "on-error-container": "#93000a",
+              "primary-fixed-dim": "#aacec3",
+              "on-primary-fixed-variant": "#2b4d44",
+              "inverse-primary": "#aacec3",
+              "secondary-fixed": "#ffdcbd",
+              "surface-variant": "#e4e2db",
+              "inverse-surface": "#30312c",
+              "surface": "#fbf9f1"
+            },
+            fontFamily: {
+              "headline": ["Lexend"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            boxShadow: {
+              'soft': '0 8px 32px rgba(125, 86, 45, 0.06)',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-text-stroke {
+            -webkit-text-stroke: 1px rgba(251, 249, 241, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-primary">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-zinc-900/80 backdrop-blur-md shadow-soft dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-[#12352d] dark:text-[#fbf9f1] font-headline tracking-tight">
+                
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-headline font-bold text-[#12352d]/60 dark:text-[#fbf9f1]/60 hover:text-[#7d562d] transition-colors duration-300" href="#">Eventos</a>
+<a class="font-headline font-bold text-[#12352d]/60 dark:text-[#fbf9f1]/60 hover:text-[#7d562d] transition-colors duration-300" href="#">Comunidades</a>
+<a class="font-headline font-bold text-[#12352d]/60 dark:text-[#fbf9f1]/60 hover:text-[#7d562d] transition-colors duration-300" href="#">Acerca de</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-5 py-2 rounded-full font-bold text-sm text-[#12352d] hover:text-[#7d562d] transition-all duration-200 active:scale-95">Iniciar sesión</button>
+<button class="bg-gradient-to-br from-primary to-primary-container text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg active:scale-95 transition-all duration-200">Registro</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-primary">
+<img alt="Grass texture" class="w-full h-full object-cover" data-alt="Close up high resolution green grass texture" src="./public/fut.gif"/>
+<div class="absolute inset-0 from-primary/80 via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-6">
+<h1 class="font-headline font-black text-7xl md:text-9xl text-surface tracking-tighter leading-none mb-6 hero-text-stroke">
+                ¡BIENVENIDOS!
+            </h1>
+
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-secondary text-surface px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all active:scale-95">Explorar comunidades</button>
+<button class="bg-surface/10 backdrop-blur-md border border-surface/20 text-surface px-8 py-4 rounded-full font-bold text-lg hover:bg-surface/20 transition-all active:scale-95">Ver eventos</button>
+</div>
+</div>
+</section>
+<!-- Events Section -->
+<section class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+
+<h2 class="font-headline font-extrabold text-5xl text-primary tracking-tight mt-2">Eventos</h2>
+</div>
+<div class="flex p-1 bg-surface-container-high rounded-full w-fit">
+<button class="px-6 py-2 rounded-full bg-primary text-on-primary font-bold text-sm">Todos</button>
+<button class="px-6 py-2 rounded-full text-on-surface-variant font-bold text-sm hover:text-primary">Oficiales</button>
+<button class="px-6 py-2 rounded-full text-on-surface-variant font-bold text-sm hover:text-primary">Locales</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Featured Card -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-2xl bg-surface-container-low shadow-soft transition-transform duration-500 hover:-translate-y-1">
+<div class="h-[400px] overflow-hidden">
+<img alt="Mountain runner" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of a group of trail runners showing effort and determination during a mountain race at sunrise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-RZvcHmXauW6c0HY43uBu3BBgvbgi7w5Y9MHuhCxwRgqVcLLggdogU2rRkTej-dwsaupiRQ_hkHxd9oZ9KcWtv1LZMdCltR1aryrJ3I1BDRo3-o6iZCUK9bvJTBI9j8PgxOAJ_2JYWkDN9QT4xkUsX1ZR77VIhePN9d3trj7tRVDpG36IDinxbxFvE1QhxWWVIE31TmfvTR3G5MCupSCIRLeDYWYacZynwmVIwkjFzA3gE3SWWSdHI2CQOlglFNhd0DFtreKZ5-k"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="inline-block px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-[10px] font-bold tracking-widest uppercase mb-3">Oficial</span>
+<h3 class="font-headline font-extrabold text-3xl text-primary mb-2">Carrera de montaña</h3>
+<p class="text-on-surface-variant font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" style="font-size: 20px;">location_on</span>
+                                Parque Nacional 
+                            </p>
+</div>
+<div class="text-right">
+<span class="block text-2xl font-black text-primary">24</span>
+<span class="text-xs font-bold text-secondary tracking-widest uppercase">Abril</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-6 mb-8 border-t border-outline-variant/30 pt-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">group</span>
+<span class="text-sm font-bold">120+ Inscritos</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">distance</span>
+<span class="text-sm font-bold">15km / 25km</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">timer</span>
+<span class="text-sm font-bold">08:00 AM</span>
+</div>
+</div>
+<button class="w-full bg-primary text-surface py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 active:scale-95 transition-transform">
+                        Inscribirse al evento
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Secondary Card -->
+<div class="md:col-span-4 group bg-surface-container-low rounded-2xl overflow-hidden shadow-soft transition-transform duration-500 hover:-translate-y-1">
+<div class="h-[250px] overflow-hidden">
+<img alt="Yoga session" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Group of people doing yoga in a sunny park" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpGDINMJD64XCZ-gbKcuEvAWqjvDakX3F1GyVujqgSV4qaHSkfg4ZIHGAIHQPzU1H2gmsf1lX2HbCRDOIgzSzXgt-LelQRhCg-2Q3oR54g76C_LitJLLJQrsctPPhQe-mweLHin3I8U_l-Wvg2mv08D-d6cwkBultLdjFg8-K0hnlvhitlZo8JXVkI1gUiZs2L7kyTLJBUaRyhK7CkbhLw6vgOlwFHeJT8SeAS7lpzrmajNjGwO_5tyf6GGnKI_l-kK-Dv9fZy1Sv7"/>
+</div>
+<div class="p-6">
+<span class="inline-block px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[10px] font-bold tracking-widest uppercase mb-3">LOCAL</span>
+<h3 class="font-headline font-bold text-2xl text-primary mb-2">Club de Yoga</h3>
+<div class="flex flex-col gap-2 mb-4">
+<p class="text-on-surface-variant text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" style="font-size: 16px;">location_on</span>
+                            Parque intermunicipal Cholula
+                        </p>
+<div class="flex items-center gap-4">
+<p class="text-on-surface-variant text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" style="font-size: 16px;">schedule</span>
+                                9:00 AM
+                            </p>
+<p class="text-on-surface-variant text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" style="font-size: 16px;">calendar_today</span>
+                                Cada domingo
+                            </p>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Únete a nuestra sesión matutina de meditación y vinyasa flow en el jardín botánico central.</p>
+<button class="w-full py-3 rounded-full border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">Registrarme</button>
+</div>
+</div>
+<!-- Grid Small Cards -->
+<div class="md:col-span-4 group bg-surface-container-low rounded-2xl p-6 shadow-soft flex flex-col justify-between transition-transform duration-500 hover:-translate-y-1">
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed mb-4">
+<span class="material-symbols-outlined">directions_bike</span>
+</div>
+<span class="inline-block px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[10px] font-bold tracking-widest uppercase mb-3">Local</span>
+<h4 class="font-headline font-bold text-xl text-primary mb-2">Rodada de convivencia</h4>
+<p class="text-on-surface-variant text-sm">Ruta ciclista de 20km para todos los niveles.</p>
+</div>
+<a class="mt-6 flex items-center gap-2 text-primary font-bold text-sm group-hover:translate-x-1 transition-transform" href="#">
+                    Ver detalles
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="md:col-span-4 group bg-surface-container-low rounded-2xl p-6 shadow-soft flex flex-col justify-between transition-transform duration-500 hover:-translate-y-1">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed mb-4">
+<span class="material-symbols-outlined">sports_soccer</span>
+</div>
+<span class="inline-block px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[10px] font-bold tracking-widest uppercase mb-3">Local</span>
+<h4 class="font-headline font-bold text-xl text-primary mb-2">Futbol rápido</h4>
+<p class="text-on-surface-variant text-sm">Torneo relámpago. Premios para los tres primeros lugares.</p>
+</div>
+<a class="mt-6 flex items-center gap-2 text-primary font-bold text-sm group-hover:translate-x-1 transition-transform" href="#">
+                    Ver detalles
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- CTA Card -->
+<div class="md:col-span-4 bg-primary rounded-2xl p-8 shadow-soft flex flex-col justify-center items-center text-center relative overflow-hidden group">
+<div class="absolute -right-8 -bottom-8 opacity-10 transition-transform duration-700 group-hover:scale-125">
+<span class="material-symbols-outlined text-[160px] text-surface">event_available</span>
+</div>
+<h4 class="font-headline font-extrabold text-2xl text-surface mb-4 relative z-10">¿Organizas eventos?</h4>
+<p class="text-surface/80 text-sm mb-8 relative z-10">Publica tus torneos, clases o rodadas y llega a más deportistas</p>
+<button class="bg-surface text-primary px-8 py-3 rounded-full font-bold text-sm relative z-10 hover:bg-secondary-fixed transition-colors">Empezar ahora</button>
+</div>
+
+</div>
+
+<button class="bg-primary text-surface px-10 py-5 rounded-full font-extrabold text-lg flex items-center gap-4 hover:shadow-xl active:scale-95 transition-all">
+                        Ver más eventos
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</section>
+<!-- Comunidades Section -->
+<section class="py-24 bg-surface-container-low px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<!-- Content Left -->
+<div class="space-y-12">
+<h2 class="font-headline font-black text-5xl md:text-6xl text-primary leading-none tracking-tight">Únete a nuestras comunidades</h2>
+<div class="space-y-6">
+<p class="text-xl text-on-surface-variant leading-relaxed font-medium">
+                            El deporte no es solo ejercicio. Es movimiento, es pasión compartida y es la energía que nos une como equipo.
+                        </p>
+<blockquote class="relative py-8 px-12 border-l-4 border-secondary bg-surface-container-highest/50 rounded-r-xl">
+<span class="absolute top-4 left-4 text-6xl text-secondary/20 font-serif leading-none">“</span>
+<p class="text-2xl font-bold italic text-on-surface">Puedo porque creo que puedo.</p>
+<footer class="mt-4 font-headline font-bold text-secondary">— Carolina Marín</footer>
+</blockquote>
+</div>
+</div>
+<!-- Communities List Right -->
+<div class="space-y-6">
+<!-- Community Item 1 -->
+<div class="group bg-surface-container-lowest p-6 rounded-2xl flex items-center justify-between transition-all hover:translate-x-4 hover:shadow-xl duration-300">
+<div class="flex items-center gap-6">
+<div class="flex flex-col items-center justify-center bg-surface-container-high px-4 py-3 rounded-xl min-w-[100px]">
+<span class="font-headline font-black text-primary text-2xl">84</span>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">PERSONAS</span>
+</div>
+<div>
+<h4 class="text-xl font-bold text-on-surface">Unidos por el deporte</h4>
+<p class="text-sm text-on-surface-variant font-medium">22 publicaciones</p>
+</div>
+</div>
+<div class="flex -space-x-4">
+<img alt="Member" class="w-10 h-10 rounded-full border-2 border-surface-container-lowest" data-alt="Portrait of a young male athlete" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe7raCpNuBk0H5uxLEq9HMqMK2TKdtLc78R8yiEk91s70-g1RZgxyzY3uvgso8JG_8946-q1xPv1A2xiiU06GLIQ3pysT-MJbvkYt8aNL4E3m7ptyYrG60UTDakyswoeWhvjxiCFBNNi1BwbFlZt0jzPJ3oiQ_Ku-tc3gda_02Oe9aNOMqKpowsYi76I31GeA-7i0AQLW66t7PMryposyLY51ou4-kRbXrdNgZcjBlLBcCK_dM8NVaRBKnyYjxxMTulLWuz1iuPD4"/>
+<img alt="Member" class="w-10 h-10 rounded-full border-2 border-surface-container-lowest" data-alt="Portrait of a young female smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPniIvk6NC1UBrjgohM-LnkcdcbDyFaLoX_UhoFM184IRIIGWU6UN-B9uJ4w-0_Xe-4gSio9IewqoMJek_y_LYUbpZxjVlBQorzGPKK8EipXn2-X6Eqa9euJUKBDRG2CFqQ5dLE7OS2lBtRwzZB1OwRYL-Gr3PNlOryc4b6fY_9ngCwv26sOlx9fghDA9DJqcdjPj45NlXmsJzzH9UhxPsdBMhLQTLUJz9JYdMUJfUe321kkP6_DzG2oLB5tgBQdPsFtH9qprBo2Y"/>
+<div class="w-10 h-10 rounded-full bg-surface-variant border-2 border-surface-container-lowest flex items-center justify-center text-[10px] font-bold text-on-surface-variant">+82</div>
+</div>
+</div>
+<!-- Community Item 2 -->
+<div class="group bg-surface-container-lowest p-6 rounded-2xl flex items-center justify-between transition-all hover:translate-x-4 hover:shadow-xl duration-300">
+<div class="flex items-center gap-6">
+<div class="flex flex-col items-center justify-center bg-surface-container-high px-4 py-3 rounded-xl min-w-[100px]">
+<span class="font-headline font-black text-primary text-2xl">156</span>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">PERSONAS</span>
+</div>
+<div>
+<h4 class="text-xl font-bold text-on-surface">Alcanza tu nivel</h4>
+<p class="text-sm text-on-surface-variant font-medium">48 publicaciones</p>
+</div>
+</div>
+<div class="flex -space-x-4">
+<img alt="Member" class="w-10 h-10 rounded-full border-2 border-surface-container-lowest" data-alt="Close up portrait of a male runner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYKOxRe6o454KbF3iM3cwhUp71K5yzPAw0-6OkUEkcfAeTwL7WybXNtLmKXMMv2IsPA9F3hzV8na4e1rZ5HM_yJYaQ4JSxfN6zQwwBXNe7dofnZPddFvy5nNRHr4w-exf7YtQgq4CTqO2xxpMRmq6wTYjv_2nyLJBM8Has74Xtkz27mf2I_YXFpIz86fa07MkPIDMFpSgVPkKfikr_Umb_qSfj9KyQevIM22ArghUm2qe5tV6DW8uhcXzMBO1IFMLALwwpkUo5bPk"/>
+<img alt="Member" class="w-10 h-10 rounded-full border-2 border-surface-container-lowest" data-alt="Smiling female face in nature" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByRvQ_mdkgsbi1DGISaw2iojgRYqaZdVggAZhmflQFObqHFkpS2D9BHOGOy_GGDF9qcoqi_DzZK0yw_UE_XUpX-orc-vRPR8GZbEGohii6n-U95nnmvS9MaWuRoPEU-R4NdMSeNrIfPUr9XB-ZqprTuMl9tMNNRpU2BUsPgRtoLfMIFcOi--2e-_mjmYpJ64vd55rDesH7RoBO4E0siMWdCXm6PXX133k3nK3T3kOk_jt-d-QFMY1jeG0DxZK2do9dz_IbAjpLH1s"/>
+<div class="w-10 h-10 rounded-full bg-surface-variant border-2 border-surface-container-lowest flex items-center justify-center text-[10px] font-bold text-on-surface-variant">+154</div>
+</div>
+</div>
+<div class="pt-8">
+<button class="w-full py-5 bg-primary text-on-primary rounded-full font-headline font-bold text-lg hover:opacity-90 transition-all flex items-center justify-center gap-4 group">
+                            Descubrir
+                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-2" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Shell -->
+<footer class="bg-[#fbf9f1] dark:bg-[#12352d] w-full py-12 px-8 tonal-shift bg-surface-dim dark:bg-black/20">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+
+<div class="flex flex-wrap justify-center gap-8 font-PLUS-JAKARTA-SANS text-sm">
+<a class="text-[#12352d]/70 dark:text-[#fbf9f1]/70 hover:underline decoration-[#7d562d]" href="#">Política de Privacidad</a>
+<a class="text-[#12352d]/70 dark:text-[#fbf9f1]/70 hover:underline decoration-[#7d562d]" href="#">Términos y Condiciones</a>
+<a class="text-[#12352d]/70 dark:text-[#fbf9f1]/70 hover:underline decoration-[#7d562d]" href="#">Contacto</a>
+</div>
+<p class="font-PLUS-JAKARTA-SANS text-sm text-[#12352d]/70 dark:text-[#fbf9f1]/70 text-center">
+                © 2026.
+            </p>
+</div>
+</footer>
+</body></html>
