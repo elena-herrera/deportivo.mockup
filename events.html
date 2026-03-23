@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesque:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800;900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline-variant": "#bfc9c4",
+              "surface-bright": "#fbf9f1",
+              "surface-container-high": "#eae8e0",
+              "background": "#fbf9f1",
+              "on-tertiary": "#ffffff",
+              "outline": "#6f7975",
+              "surface-variant": "#e4e3db",
+              "primary-container": "#377b6b",
+              "inverse-surface": "#30312c",
+              "tertiary-container": "#497961",
+              "surface-container-highest": "#e4e3db",
+              "on-tertiary-fixed": "#002113",
+              "secondary-fixed": "#ffdcbe",
+              "on-secondary-container": "#7a532b",
+              "on-secondary-fixed-variant": "#623f18",
+              "on-primary-fixed": "#00201a",
+              "surface-tint": "#23695a",
+              "inverse-primary": "#90d4c1",
+              "inverse-on-surface": "#f3f1e9",
+              "on-surface": "#1b1c17",
+              "secondary-fixed-dim": "#f0bd8b",
+              "on-primary-fixed-variant": "#005143",
+              "on-surface-variant": "#3f4945",
+              "surface-container-lowest": "#ffffff",
+              "primary": "#196253",
+              "surface-container": "#f0eee6",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#1f4f3a",
+              "surface": "#fbf9f1",
+              "secondary": "#7d562d",
+              "error": "#ba1a1a",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#90d4c1",
+              "surface-dim": "#dcdad2",
+              "on-secondary": "#ffffff",
+              "tertiary": "#306049",
+              "on-primary-container": "#ccffef",
+              "tertiary-fixed": "#baeed0",
+              "on-background": "#1b1c17",
+              "on-secondary-fixed": "#2c1600",
+              "primary-fixed": "#abf0dc",
+              "on-tertiary-container": "#cfffe2",
+              "on-primary": "#ffffff",
+              "surface-container-low": "#f6f4ec",
+              "tertiary-fixed-dim": "#9fd2b5",
+              "secondary-container": "#ffca98",
+              "on-error-container": "#93000a"
+            },
+             fontFamily: {
+              "headline": ["Lexend"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Space Grotesque', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-text-stroke {
+            -webkit-text-stroke: 1px rgba(251, 249, 241, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- TopNavBar -->
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-zinc-900/80 backdrop-blur-md shadow-soft dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-[#12352d] dark:text-[#fbf9f1] font-headline tracking-tight">
+<a class="font-headline font-bold text-[#12352d]/60 dark:text-[#fbf9f1]/60 hover:text-[#7d562d] transition-colors duration-300" href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+</svg>
+</a>                
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-headline font-bold text-[#12352d]/60 dark:text-[#fbf9f1]/60 hover:text-[#7d562d] transition-colors border-b-2 border-emerald-90" href="#">Eventos</a>
+<a class="font-headline font-bold text-[#12352d]/60 dark:text-[#fbf9f1]/60 hover:text-[#7d562d] transition-colors duration-300" href="#">Comunidades</a>
+<a class="font-headline font-bold text-[#12352d]/60 dark:text-[#fbf9f1]/60 hover:text-[#7d562d] transition-colors duration-300" href="#">Acerca de</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-5 py-2 rounded-full font-bold text-sm text-[#12352d] hover:text-[#7d562d] transition-all duration-200 active:scale-95">Iniciar sesión</button>
+<button class="bg-gradient-to-br from-primary to-primary-container text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg active:scale-95 transition-all duration-200">Registro</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+
+<!-- Próximos Partidos Section -->
+<section class="py-24 px-6 bg-surface-container-low">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<h2 class="text-sm font-bold text-secondary uppercase tracking-[0.3em] mb-4">Agenda Deportiva</h2>
+<h3 class="text-5xl font-bold text-primary tracking-tight">PRÓXIMOS EVENTOS</h3>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full flex items-center justify-center border border-outline-variant hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full flex items-center justify-center border border-outline-variant hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Match Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 hover:translate-y-[-8px] transition-transform duration-300">
+<div class="flex justify-between items-center mb-8">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold rounded-sm uppercase tracking-wider">Local</span>
+<span class="text-xs font-medium text-outline">15 de Abril · 10:00</span>
+</div>
+<div class="flex justify-around items-center mb-8">
+<div class="text-center">
+<div class="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-3xl text-primary">shield</span>
+</div>
+<p class="text-sm font-bold uppercase tracking-tighter">Cuautlancingo</p>
+</div>
+<div class="text-lg font-bold text-outline-variant">VS</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-3xl text-secondary">shield</span>
+</div>
+<p class="text-sm font-bold uppercase tracking-tighter">Santa Isabel</p>
+</div>
+</div>
+<button class="w-full py-4 border border-primary text-primary font-bold uppercase tracking-widest text-[10px] hover:bg-primary hover:text-on-primary transition-all rounded-lg">
+    Ver detalles
+</button>
+</div>
+<!-- Match Card 2 -->
+<div class="bg-primary text-on-primary rounded-xl p-8 hover:translate-y-[-8px] transition-transform duration-300">
+
+<div class="flex justify-around items-center mb-2">
+<div class="w-full h-full text-center">
+
+    <div class="flex justify-between items-center mb-2">
+        <span class="px-3 py-1 bg-secondary text-on-secondary text-[10px] font-bold rounded-sm uppercase tracking-wider">Oficial</span>
+        <span class="text-xs font-medium text-on-primary/60">24 de Abril · 08:00</span>
+    </div>
+    <div class="h-[200px] overflow-hidden">
+        <img alt="Mountain runner" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of a group of trail runners showing effort and determination during a mountain race at sunrise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-RZvcHmXauW6c0HY43uBu3BBgvbgi7w5Y9MHuhCxwRgqVcLLggdogU2rRkTej-dwsaupiRQ_hkHxd9oZ9KcWtv1LZMdCltR1aryrJ3I1BDRo3-o6iZCUK9bvJTBI9j8PgxOAJ_2JYWkDN9QT4xkUsX1ZR77VIhePN9d3trj7tRVDpG36IDinxbxFvE1QhxWWVIE31TmfvTR3G5MCupSCIRLeDYWYacZynwmVIwkjFzA3gE3SWWSdHI2CQOlglFNhd0DFtreKZ5-k"/>
+    </div>
+</div>
+</div>
+<div class="text-center mb-2">
+    <p class="text-sm font-bold uppercase tracking-tighter">Carrera de montaña</p>
+</div>
+<button class="w-full py-4 bg-secondary text-on-secondary font-bold uppercase tracking-widest text-[10px] hover:opacity-90 transition-all rounded-lg">
+                        Ver detalles
+</button>
+</div>
+<!-- Match Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-8 hover:translate-y-[-8px] transition-transform duration-300">
+<div class="flex justify-between items-center mb-8">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-[10px] font-bold rounded-sm uppercase tracking-wider">Local</span>
+<span class="text-xs font-medium text-outline">30 de Abril · 07:00</span>
+</div>
+<div class="flex justify-around items-center mb-8">
+<div class="text-center">
+<div class="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-secondary">directions_bike</span>
+</div>
+</div>
+</div>
+<div class="text-center mb-2">
+    <p class="text-sm font-bold uppercase tracking-tighter"> Rodada de convivencia</p>
+    <p class="text-on-surface-variant text-sm">Ruta ciclista de 20km para todos los niveles.</p>
+</div>
+<button class="w-full py-4 border border-primary text-primary font-bold uppercase tracking-widest text-[10px] hover:bg-primary hover:text-on-primary transition-all rounded-lg">
+    Ver detalles
+ </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Explora por Deporte Section -->
+<section class="py-24 px-6 overflow-hidden">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<h2 class="text-sm font-bold text-secondary uppercase tracking-[0.3em] mb-4">Categorías</h2>
+<h3 class="text-5xl font-bold text-primary tracking-tight">EXPLORA POR DEPORTE</h3>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full flex items-center justify-center border border-outline-variant hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full flex items-center justify-center border border-outline-variant hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="group relative aspect-square overflow-hidden rounded-2xl bg-surface-container">
+<img alt="Action shot of a football match" class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:scale-110 group-hover:grayscale-0" src="./public/fut.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent p-6 flex flex-col justify-end">
+<span class="material-symbols-outlined text-white mb-2">sports_soccer</span>
+<h4 class="text-white font-bold text-xl uppercase tracking-tighter leading-none">Fútbol</h4>
+</div>
+</div>
+<div class="group relative aspect-square overflow-hidden rounded-2xl bg-surface-container">
+<img alt="Basketball player dunking" class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:scale-110 group-hover:grayscale-0" src="./public/basquet.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent p-6 flex flex-col justify-end">
+<span class="material-symbols-outlined text-white mb-2">sports_basketball</span>
+<h4 class="text-white font-bold text-xl uppercase tracking-tighter leading-none">Básquet</h4>
+</div>
+</div>
+<div class="group relative aspect-square overflow-hidden rounded-2xl bg-surface-container">
+<img alt="Tennis match on a clay court" class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:scale-110 group-hover:grayscale-0" src="./public/beis.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-tertiary-container/90 via-tertiary-container/20 to-transparent p-6 flex flex-col justify-end">
+<span class="material-symbols-outlined text-white mb-2">sports_baseball</span>
+<h4 class="text-white font-bold text-xl uppercase tracking-tighter leading-none">Béisbol</h4>
+</div>
+</div>
+<div class="group relative aspect-square overflow-hidden rounded-2xl bg-surface-container">
+<img alt="Formula 1 car on track" class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:scale-110 group-hover:grayscale-0" src="./public/ciclismo.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/20 to-transparent p-6 flex flex-col justify-end">
+<span class="material-symbols-outlined text-white mb-2">speed</span>
+<h4 class="text-white font-bold text-xl uppercase tracking-tighter leading-none">Ciclismo</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CALENDARIO DE EVENTOS Section -->
+<section class="py-24 px-6 bg-surface">
+<div class="max-w-screen-2xl mx-auto">
+<div class="mb-12">
+<h2 class="text-sm font-bold text-secondary uppercase tracking-[0.3em] mb-4">Agenda Oficial</h2>
+<h3 class="text-5xl font-bold text-primary tracking-tight">CALENDARIO DE EVENTOS</h3>
+<p class="text-on-surface-variant mt-4 font-medium">Mantente al día con toda la acción de la temporada 2024/25.</p>
+</div>
+<!-- Filters -->
+<div class="flex flex-col gap-6 mb-12">
+<div class="flex flex-wrap items-center gap-3">
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest mr-2">Mes:</span>
+<button class="px-6 py-2 bg-primary text-on-primary rounded-full text-xs font-bold uppercase tracking-wider transition-all">Abril</button>
+<button class="px-6 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-container-high rounded-full text-xs font-bold uppercase tracking-wider transition-all">Mayo</button>
+<button class="px-6 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-container-high rounded-full text-xs font-bold uppercase tracking-wider transition-all">Junio</button>
+</div>
+
+</div>
+<!-- Calendar List -->
+<div class="space-y-4">
+<!-- Event Row 1 -->
+<div class="bg-surface-container-low rounded-2xl p-6 lg:p-8 flex flex-col md:flex-row items-center gap-8 group hover:bg-surface-container-high transition-all border border-transparent hover:border-outline-variant/20">
+<div class="flex flex-col items-center min-w-[80px]">
+<span class="text-3xl font-bold text-primary">15</span>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest">ABRIL</span>
+</div>
+<div class="flex-grow grid grid-cols-1 lg:grid-cols-2 gap-4 w-full md:w-auto">
+<div>
+<h4 class="text-xl font-bold text-on-surface tracking-tight mb-1">Cuautlancingo VS Santa Isabel</h4>
+<div class="flex items-center gap-2 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-sm">location_on</span>
+    Futbol Rápido Cuautlancingo
+</div>
+</div>
+<div class="flex items-center lg:justify-end gap-6">
+<div class="flex flex-col lg:items-end">
+<span class="text-sm font-bold text-primary">10:00</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 w-full md:w-auto">
+<button class="flex-grow md:flex-none px-8 py-3 bg-primary text-on-primary rounded-xl text-xs font-bold uppercase tracking-widest hover:shadow-lg transition-all active:scale-95">
+     Ver Detalles
+</button>
+</div>
+</div>
+<!-- Event Row 2 -->
+<div class="bg-surface-container-low rounded-2xl p-6 lg:p-8 flex flex-col md:flex-row items-center gap-8 group hover:bg-surface-container-high transition-all border border-transparent hover:border-outline-variant/20">
+<div class="flex flex-col items-center min-w-[80px]">
+<span class="text-3xl font-bold text-primary">24</span>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest">Abril</span>
+</div>
+<div class="flex-grow grid grid-cols-1 lg:grid-cols-2 gap-4 w-full md:w-auto">
+<div>
+<h4 class="text-xl font-bold text-on-surface tracking-tight mb-1">Carrera de Montaña</h4>
+<div class="flex items-center gap-2 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-sm">location_on</span>
+    Parque Nacional
+</div>
+</div>
+<div class="flex items-center lg:justify-end gap-6">
+<div class="flex flex-col lg:items-end">
+<span class="text-sm font-bold text-error animate-pulse flex items-center gap-1">
+</span>
+<span class="text-sm font-bold text-primary">08:00</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 w-full md:w-auto">
+<button class="flex-grow md:flex-none px-8 py-3 border-2 border-primary text-primary rounded-xl text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all">
+                            Ver Detalles
+                        </button>
+</div>
+</div>
+<!-- Event Row 3 -->
+<div class="bg-surface-container-low rounded-2xl p-6 lg:p-8 flex flex-col md:flex-row items-center gap-8 group hover:bg-surface-container-high transition-all border border-transparent hover:border-outline-variant/20 opacity-70">
+<div class="flex flex-col items-center min-w-[80px]">
+<span class="text-3xl font-bold text-outline">08</span>
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest">Marzo</span>
+</div>
+<div class="flex-grow grid grid-cols-1 lg:grid-cols-2 gap-4 w-full md:w-auto">
+<div>
+<h4 class="text-xl font-bold text-on-surface tracking-tight mb-1">Torneo de Ajedrez</h4>
+<div class="flex items-center gap-2 text-on-surface-variant text-xs">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                Centro Comercial
+                            </div>
+</div>
+<div class="flex items-center lg:justify-end gap-6">
+<div class="flex flex-col lg:items-end">
+<span class="text-[10px] font-bold text-outline uppercase tracking-tighter">Finalizado</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 w-full md:w-auto">
+<button class="flex-grow md:flex-none px-8 py-3 bg-surface-container-highest text-on-surface-variant rounded-xl text-xs font-bold uppercase tracking-widest hover:bg-surface-variant transition-all">
+                            Ver Detalles
+</button>
+</div>
+</div>
+</div>
+<div class="mt-12 flex justify-center">
+<button class="group flex items-center gap-3 text-xs font-bold text-secondary uppercase tracking-[0.2em] border-b-2 border-secondary/20 pb-2 hover:border-secondary transition-all">
+                    Ver Calendario Completo
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<!-- Footer Shell -->
+<footer class="bg-[#fbf9f1] dark:bg-[#12352d] w-full py-12 px-8 tonal-shift bg-surface-dim dark:bg-black/20">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+
+<div class="flex flex-wrap justify-center gap-8 font-PLUS-JAKARTA-SANS text-sm">
+<a class="text-[#12352d]/70 dark:text-[#fbf9f1]/70 hover:underline decoration-[#7d562d]" href="#">Política de Privacidad</a>
+<a class="text-[#12352d]/70 dark:text-[#fbf9f1]/70 hover:underline decoration-[#7d562d]" href="#">Términos y Condiciones</a>
+<a class="text-[#12352d]/70 dark:text-[#fbf9f1]/70 hover:underline decoration-[#7d562d]" href="#">Contacto</a>
+</div>
+<p class="font-PLUS-JAKARTA-SANS text-sm text-[#12352d]/70 dark:text-[#fbf9f1]/70 text-center">
+                © 2026.
+            </p>
+</div>
+</footer>
+</body></html>
