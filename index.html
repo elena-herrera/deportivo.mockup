@@ -4,6 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800;900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
@@ -31,7 +32,7 @@
               "on-surface": "#1b1c17",
               "on-primary-fixed": "#00201a",
               "surface-tint": "#43655c",
-              "primary-container": "#2a4c43",
+              "primary-container": "#1E293B",
               "on-tertiary-fixed": "#002113",
               "on-secondary-container": "#7a532a",
               "on-error": "#ffffff",
@@ -44,7 +45,7 @@
               "on-secondary-fixed": "#2c1600",
               "surface-bright": "#fbf9f1",
               "tertiary-fixed-dim": "#94d4b1",
-              "primary": "#377b6b",
+              "primary": "#d50f8c",
               "outline-variant": "#c2c8c1",
               "secondary-container": "#ffca98",
               "secondary": "#7d562d",
@@ -84,22 +85,127 @@
         .hero-text-stroke {
             -webkit-text-stroke: 1px rgba(251, 249, 241, 0.3);
         }
+        .carousel {
+          position: relative;
+          overflow: hidden;
+          padding: 10px;
+        }
+
+        .carousel-track {
+          display: flex;
+          gap: 20px;
+          overflow: hidden;
+          scroll-behavior: smooth;
+        }
+
+        /* SNAP PERFECTO */
+        .carousel-track {
+          scroll-snap-type: x mandatory;
+        }
+
+        .card {
+          flex: 0 0 auto;
+          width: 250px;
+          height: 250px;
+          background: white;
+          border-radius: 12px;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          scroll-snap-align: center;
+          transition: transform 0.1s;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          overflow: hidden; /* importante */
+        }
+
+        /* HEADER */
+        .card_name {
+          padding: 1px;
+          background: #f0f0f0;
+          text-align: center;
+        }
+
+        /* CONTENT */
+        .description {
+          flex: 1; /* ocupa el espacio del centro */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 1px;
+          text-align: center;
+        }
+
+        /* FOOTER */
+        .discipline {
+            padding: 5px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            width: 100%;
+        }
+        .description .material-symbols-outlined{
+            font-size: 60px;
+        }
+        button .material-symbols-outlined{
+           vertical-align: middle;
+        }
+        
+        .card:hover {
+          transform: scale(1.05);
+        }
+
+        /* Flechas */
+        .arrow {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: white;
+          border: none;
+          border-radius: 50%;
+          padding: 10px;
+          cursor: pointer;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+          z-index: 10;
+          opacity: 0.9;
+        }
+
+        .arrow.left { left: 10px; }
+        .arrow.right { right: 10px; }
+
+        .arrow.hidden {
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+          .card {
+            width: 200px;
+          }
+        }
+        .carousel-track {
+          scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-primary">
 <!-- Top Navigation Shell -->
 <nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-zinc-900/80 backdrop-blur-md shadow-soft dark:shadow-none">
 <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-<div class="text-2xl font-black text-[#12352d] dark:text-[#fbf9f1] font-headline tracking-tight">
+<div class="text-2xl font-black text-[#12352d] dark:text-[#12352d] font-headline tracking-tight">
                 
             </div>
 <div class="hidden md:flex items-center gap-8">
-<a class="font-headline font-bold text-[#12352d]/60 dark:text-[#fbf9f1]/60 hover:text-[#7d562d] transition-colors duration-300" href="./events.html">Eventos</a>
-<a class="font-headline font-bold text-[#12352d]/60 dark:text-[#fbf9f1]/60 hover:text-[#7d562d] transition-colors duration-300" href="./communities.html">Comunidades</a>
-<a class="font-headline font-bold text-[#12352d]/60 dark:text-[#fbf9f1]/60 hover:text-[#7d562d] transition-colors duration-300" href="#">Acerca de</a>
+<a class="font-headline font-bold text-[#1E293B] dark:text-[#1E293B]/60 hover:text-[#d50f8c] transition-colors duration-300" href="./events.html">Eventos</a>
+<a class="font-headline font-bold text-[#1E293B] dark:text-[1E293B]/60 hover:text-[#d50f8c] transition-colors duration-300" href="./communities.html">Comunidades</a>
+<a class="font-headline font-bold text-[#1E293B] dark:text-[1E293B]/60 hover:text-[#d50f8c] transition-colors duration-300" href="#">Acerca de</a>
 </div>
 <div class="flex items-center gap-4">
-<button class="px-5 py-2 rounded-full font-bold text-sm text-[#12352d] hover:text-[#7d562d] transition-all duration-200 active:scale-95">Iniciar sesión</button>
+<button class="px-5 py-2 rounded-full font-bold text-sm text-[#1E293B] hover:text-[#d50f8c] transition-all duration-200 active:scale-95">Iniciar sesión</button>
 <button class="bg-gradient-to-br from-primary to-primary-container text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg active:scale-95 transition-all duration-200">Registro</button>
 </div>
 </div>
@@ -116,16 +222,75 @@
             </h1>
 
 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-<button class="bg-secondary text-surface px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all active:scale-95">Explorar comunidades</button>
+<button class="bg-surface/10 backdrop-blur-md text-surface px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all active:scale-95">Conocer más 
+  <span class="material-symbols-outlined">
+  play_circle
+  </span>
+</button>
 <button class="bg-surface/10 backdrop-blur-md border border-surface/20 text-surface px-8 py-4 rounded-full font-bold text-lg hover:bg-surface/20 transition-all active:scale-95">Ver eventos</button>
 </div>
 </div>
 </section>
+
+
+<!-- Discipline Card -->
+ <section class="py-12 px-6 md:px-12 max-w-7xl mx-auto">
+<div>
+  <h2 class="font-headline font-extrabold text-5xl text-primary tracking-tight py-12 text-center">Disciplinas</h2>
+</div>
+ <div class="carousel">
+
+  <button class="arrow left">
+    <span class="material-symbols-outlined">arrow_back</span>
+  </button>
+
+  <div class="carousel-track">
+    <div class="card">
+      <div class="description">
+        <span class="material-symbols-outlined">sports_handball</span>
+      </div>      
+      <div class="discipline">Voleibol</div>
+    </div>
+    <div class="card">
+      <div class="description"><span class="material-symbols-outlined">directions_bike</span></div>
+      <div class="discipline">Ciclismo</div>
+    </div>
+    <div class="card">
+      <div class="description"><span class="material-symbols-outlined">sports_rugby</span></div>
+      <div class="discipline">Rugby</div>
+    </div>
+    <div class="card">
+      <div class="description"><span class="material-symbols-outlined">sports_gymnastics</span></div>
+      <div class="discipline">Gimnasia artística</div>
+    </div>
+    <div class="card">
+      <div class="description"><span class="material-symbols-outlined">taunt</span></div>
+      <div class="discipline">Boxeo</div>
+    </div>
+    <div class="card">
+      <div class="description"><span class="material-symbols-outlined">sprint</span></div>
+      <div class="discipline">Atletismo</div>
+    </div>
+    <div class="card">
+      <div class="description"><span class="material-symbols-outlined">pool</span></div>
+      <div class="discipline">Natación</div>
+    </div>
+        <div class="card">
+      <div class="description"><span class="material-symbols-outlined">sports_tennis</span></div>
+      <div class="discipline">Tenis</div>
+    </div>
+  </div>
+
+  <button class="arrow right">
+    <span class="material-symbols-outlined">arrow_forward</span>
+  </button>
+
+</div>
+</section>
 <!-- Events Section -->
-<section class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+<section class="py-12 px-6 md:px-12 max-w-7xl mx-auto">
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
 <div>
-
 <h2 class="font-headline font-extrabold text-5xl text-primary tracking-tight mt-2">Eventos</h2>
 </div>
 <div class="flex p-1 bg-surface-container-high rounded-full w-fit">
@@ -176,6 +341,7 @@
 </div>
 </div>
 <!-- Secondary Card -->
+
 <div class="md:col-span-4 group bg-surface-container-low rounded-2xl overflow-hidden shadow-soft transition-transform duration-500 hover:-translate-y-1">
 <div class="h-[250px] overflow-hidden">
 <img alt="Yoga session" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Group of people doing yoga in a sunny park" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpGDINMJD64XCZ-gbKcuEvAWqjvDakX3F1GyVujqgSV4qaHSkfg4ZIHGAIHQPzU1H2gmsf1lX2HbCRDOIgzSzXgt-LelQRhCg-2Q3oR54g76C_LitJLLJQrsctPPhQe-mweLHin3I8U_l-Wvg2mv08D-d6cwkBultLdjFg8-K0hnlvhitlZo8JXVkI1gUiZs2L7kyTLJBUaRyhK7CkbhLw6vgOlwFHeJT8SeAS7lpzrmajNjGwO_5tyf6GGnKI_l-kK-Dv9fZy1Sv7"/>
@@ -206,7 +372,7 @@
 <!-- Grid Small Cards -->
 <div class="md:col-span-4 group bg-surface-container-low rounded-2xl p-6 shadow-soft flex flex-col justify-between transition-transform duration-500 hover:-translate-y-1">
 <div>
-<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed mb-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed mb-4">
 <span class="material-symbols-outlined">directions_bike</span>
 </div>
 <span class="inline-block px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[10px] font-bold tracking-widest uppercase mb-3">Local</span>
@@ -220,7 +386,7 @@
 </div>
 <div class="md:col-span-4 group bg-surface-container-low rounded-2xl p-6 shadow-soft flex flex-col justify-between transition-transform duration-500 hover:-translate-y-1">
 <div>
-<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed mb-4">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed mb-4">
 <span class="material-symbols-outlined">sports_soccer</span>
 </div>
 <span class="inline-block px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[10px] font-bold tracking-widest uppercase mb-3">Local</span>
@@ -327,4 +493,128 @@
             </p>
 </div>
 </footer>
-</body></html>
+</body>
+<script>
+const track = document.querySelector('.carousel-track');
+const btnLeft = document.querySelector('.arrow.left');
+const btnRight = document.querySelector('.arrow.right');
+
+let cards = Array.from(track.children);
+
+/* 🔁 LOOP INFINITO */
+const clonesBefore = cards.slice(-2).map(card => card.cloneNode(true));
+const clonesAfter = cards.slice(0, 2).map(card => card.cloneNode(true));
+
+clonesBefore.forEach(clone => track.insertBefore(clone, track.firstChild));
+clonesAfter.forEach(clone => track.appendChild(clone));
+
+cards = Array.from(track.children);
+
+const gap = 20;
+let cardWidth = cards[0].offsetWidth + gap;
+
+/* Posición inicial */
+track.scrollLeft = cardWidth * 2;
+
+/* 🔄 FUNCIÓN MOVER */
+function move(dir = 1) {
+  track.scrollLeft += dir * cardWidth;
+}
+
+/* 🖱️ BOTONES */
+btnRight.onclick = () => {
+  move(1);
+  resetAutoplay();
+};
+
+btnLeft.onclick = () => {
+  move(-1);
+  resetAutoplay();
+};
+
+/* 🤖 AUTOPLAY */
+let autoplayInterval;
+
+function startAutoplay() {
+  autoplayInterval = setInterval(() => {
+    move(1);
+  }, 3000); // cada 3 segundos
+}
+
+function stopAutoplay() {
+  clearInterval(autoplayInterval);
+}
+
+function resetAutoplay() {
+  stopAutoplay();
+  startAutoplay();
+}
+
+/* ▶️ INICIAR */
+startAutoplay();
+
+/* ⏸️ PAUSA SI EL USUARIO INTERACTÚA */
+track.addEventListener('mouseenter', stopAutoplay);
+track.addEventListener('mouseleave', startAutoplay);
+
+track.addEventListener('touchstart', stopAutoplay);
+track.addEventListener('touchend', startAutoplay);
+
+/* 🔁 LOOP INVISIBLE */
+track.addEventListener('scroll', () => {
+  const maxScroll = track.scrollWidth - track.clientWidth;
+
+  if (track.scrollLeft <= 0) {
+    track.scrollLeft = cardWidth * (cards.length - 4);
+  }
+
+  if (track.scrollLeft >= maxScroll - 1) {
+    track.scrollLeft = cardWidth * 2;
+  }
+
+  updateArrows();
+});
+
+/* 👁️ FLECHAS INTELIGENTES */
+function updateArrows() {
+  btnLeft.classList.toggle("hidden", track.scrollLeft <= 5);
+  btnRight.classList.toggle(
+    "hidden",
+    track.scrollLeft >= track.scrollWidth - track.clientWidth - 5
+  );
+}
+
+updateArrows();
+
+/* 📱 RESPONSIVE SIN RELOAD */
+window.addEventListener('resize', () => {
+  cardWidth = cards[0].offsetWidth + gap;
+});
+
+
+const disciplines = document.querySelectorAll('.discipline');
+
+function randomColor() {
+  const colors = [
+    "#078e97",
+    "#1a8360",
+    "#687c75",
+    "#FFA07A",
+    "#d35400",
+    "#9B59B6",
+    "#2ECC71",
+    "#0fa4a9",
+    "#27ae60",
+    "#d35400",
+    "#f3aa2d",
+    "#3498db",
+  ];
+  return colors[Math.floor(Math.random() * colors.length)];
+}
+
+disciplines.forEach(el => {
+  el.style.backgroundColor = randomColor();
+});
+
+</script>
+</html>
