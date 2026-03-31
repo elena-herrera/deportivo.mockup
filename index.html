@@ -32,7 +32,7 @@
               "on-surface": "#1b1c17",
               "on-primary-fixed": "#00201a",
               "surface-tint": "#43655c",
-              "primary-container": "#1E293B",
+              "primary-container": "#370826",
               "on-tertiary-fixed": "#002113",
               "on-secondary-container": "#7a532a",
               "on-error": "#ffffff",
@@ -190,6 +190,60 @@
         .carousel-track {
           scroll-behavior: smooth;
         }
+        .bt-pink{
+          overflow: hidden;
+          cursor: pointer;
+          transition: color 350ms cubic-bezier(0.4, 0, 0.44, 0.61),
+                      border-color 350ms cubic-bezier(0.4, 0, 0.44, 0.61);
+        }
+        .bt-pink::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0%;          /* empieza oculto */
+          height: 100%;
+          background-color: #d50f8c; /* color de fondo al hacer hover */
+          z-index: -1;         /* detrás del texto */
+          transition: width 350ms cubic-bezier(0.4, 0, 0.44, 0.61);
+        }
+
+        /* Efecto al pasar el mouse */
+        .bt-pink:hover {
+          color: white;       /* cambia el color del texto */
+          border:1px solid #d50f8c;
+        }
+
+        .bt-pink:hover::after {
+          width: 100%;        /* el fondo se expande horizontalmente */
+        }
+        .bt-wt{
+          overflow: hidden;
+          cursor: pointer;
+          transition: color 350ms cubic-bezier(0.4, 0, 0.44, 0.61),
+                      border-color 350ms cubic-bezier(0.4, 0, 0.44, 0.61);
+        }
+        .bt-wt::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0%;          /* empieza oculto */
+          height: 100%;
+          background-color: #f0f0f0; /* color de fondo al hacer hover */
+          z-index: -1;         /* detrás del texto */
+          transition: width 350ms cubic-bezier(0.4, 0, 0.44, 0.61);
+        }
+
+        /* Efecto al pasar el mouse */
+        .bt-wt:hover {
+          color: #d50f8c;       /* cambia el color del texto */
+          border-color: #f0f0f0;
+        }
+
+        .bt-wt:hover::after {
+          width: 100%;        /* el fondo se expande horizontalmente */
+        }
     </style>
 </head>
 <body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-primary">
@@ -222,15 +276,16 @@
             </h1>
 
 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-<button class="bg-surface/10 backdrop-blur-md text-surface px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all active:scale-95">Conocer más 
+<button class="bg-surface/10 backdrop-blur-md text-surface px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all active:scale-95 bt-pink">Conocer más 
   <span class="material-symbols-outlined">
   play_circle
   </span>
 </button>
-<button class="bg-surface/10 backdrop-blur-md border border-surface/20 text-surface px-8 py-4 rounded-full font-bold text-lg hover:bg-surface/20 transition-all active:scale-95">Ver eventos</button>
+<a class="bg-surface/10 backdrop-blur-md border border-surface/20 text-surface px-8 py-4 rounded-full font-bold text-lg hover:bg-surface/20 transition-all active:scale-95 bt-pink" href="#events">Ver eventos</a>
 </div>
 </div>
 </section>
+
 
 
 <!-- Discipline Card -->
@@ -291,7 +346,7 @@
 <section class="py-12 px-6 md:px-12 max-w-7xl mx-auto">
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
 <div>
-<h2 class="font-headline font-extrabold text-5xl text-primary tracking-tight mt-2">Eventos</h2>
+<h2 id="events" class="font-headline font-extrabold text-5xl text-primary tracking-tight mt-2">Eventos</h2>
 </div>
 <div class="flex p-1 bg-surface-container-high rounded-full w-fit">
 <button class="px-6 py-2 rounded-full bg-primary text-on-primary font-bold text-sm">Todos</button>
@@ -334,7 +389,7 @@
 <span class="text-sm font-bold">08:00 AM</span>
 </div>
 </div>
-<button class="w-full bg-primary text-surface py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<button class="w-full bg-primary backdrop-blur-md text-surface px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all active:scale-95 bt-wt">
                         Inscribirse al evento
                         <span class="material-symbols-outlined">arrow_forward</span>
 </button>
@@ -410,7 +465,8 @@
 
 </div>
 
-<button class="bg-primary text-surface px-10 py-5 rounded-full font-extrabold text-lg flex items-center gap-4 hover:shadow-xl active:scale-95 transition-all">
+<button class="bg-primary backdrop-blur-md text-surface px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all active:scale-95 bt-wt">
+
                         Ver más eventos
                 <span class="material-symbols-outlined">arrow_forward</span>
 </button>
@@ -471,7 +527,7 @@
 </div>
 </div>
 <div class="pt-8">
-<button class="w-full py-5 bg-primary text-on-primary rounded-full font-headline font-bold text-lg hover:opacity-90 transition-all flex items-center justify-center gap-4 group">
+<button class="w-full bg-primary backdrop-blur-md text-surface px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all active:scale-95 bt-wt">
                             Descubrir
                             <span class="material-symbols-outlined transition-transform group-hover:translate-x-2" data-icon="arrow_forward">arrow_forward</span>
 </button>
