@@ -89,7 +89,7 @@
 </div>
 <nav class="flex-1 space-y-2">
 
-<a class="flex items-center gap-3 px-3 py-2.5 rounded bg-slate-200 dark:bg-slate-800 text-[#d50f8c] border-l-4 border-[#d50f8c] font-bold font-manrope text-sm tracking-tight scale-95 active:scale-100 transition-transform" href="#">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope font-semibold text-sm tracking-tight scale-95 active:scale-100 transition-transform" href="./index.html">
 <span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
                 Unidades deportivas
 </a>
@@ -98,7 +98,7 @@
                 Administración ▼
             </a>
 
-<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope font-semibold text-sm tracking-tight scale-95 active:scale-100 transition-transform" href="./users.html">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded bg-slate-200 dark:bg-slate-800 text-[#d50f8c] border-l-4 border-[#d50f8c] font-bold font-manrope text-sm tracking-tight scale-95 active:scale-100 transition-transform" href="#">
 <span class="material-symbols-outlined" data-icon="group">group</span>
                 Usuarios
             </a>
@@ -151,38 +151,22 @@
 </header>
 <!-- Main Content -->
 <main class="ml-64 pt-24 px-10 pb-12">
-<div class="flex items-right justify-end mb-6">
-  <button class="flex items-center gap-2 px-3 py-1.5 bg-primary text-on-primary rounded-lg text-xs font-bold transition-transform active:scale-95">
-    <span class="material-symbols-outlined text-sm">add</span>
-      Añadir nuevo
-  </button>
-</div>
 <!-- Hero Header Section -->
 <div class="mb-10">
 <div class="flex items-end justify-between">
 <div>
-<h2 class="text-3xl font-extrabold tracking-tight text-primary-container">Unidades deportivas</h2>
-<p class="text-on-surface-variant mt-2 font-body max-w-2xl">Gestionar y supervisar las sedes deportivas. </p>
+<h2 class="text-3xl font-extrabold tracking-tight text-primary-container">Usuarios</h2>
+<p class="text-on-surface-variant mt-2 font-body max-w-2xl">Gestionar y supervisar los usuarios del sistema. </p>
 </div>
 <div class="flex gap-3">
-<div class="px-6 py-4 bg-surface-container-lowest rounded-xl flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-[#f1e7ee] flex items-center justify-center">
-<span class="material-symbols-outlined text-[#d50f8c]" style="font-variation-settings: 'FILL' 1;">analytics</span>
-</div>
-<div>
-<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Actividad reciente</p>
-<p class="text-xl font-black text-primary-container">24</p>
-</div>
-</div>
-<div class="px-6 py-4 bg-surface-container-lowest rounded-xl flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
-<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">groups</span>
-</div>
-<div>
-<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Total</p>
-<p class="text-xl font-black text-primary-container">1,402</p>
-</div>
-</div>
+  <button class="flex items-center gap-2 px-3 py-1.5 bg-primary text-on-primary rounded-lg text-xs font-bold transition-transform active:scale-95">
+    <span class="material-symbols-outlined text-sm">add</span>
+      Añadir nuevo
+  </button>
+    <button class="flex items-center gap-2 px-3 py-1.5 bg-primary text-on-primary rounded-lg text-xs font-bold transition-transform active:scale-95">
+    <span class="material-symbols-outlined">user_attributes</span>
+      Roles
+  </button>
 </div>
 </div>
 </div>
@@ -192,21 +176,19 @@
 <div class="flex items-center gap-3">
 <div class="flex bg-surface-container-high p-1 rounded-lg">
 <button class="px-4 py-1.5 rounded-md bg-surface-container-lowest text-xs font-bold text-primary-container shadow-sm">Todos</button>
-<button class="px-4 py-1.5 rounded-md text-xs font-medium text-on-surface-variant hover:text-primary transition-colors">Local</button>
-<button class="px-4 py-1.5 rounded-md text-xs font-medium text-on-surface-variant hover:text-primary transition-colors">Oficial</button>
+<button class="px-4 py-1.5 rounded-md text-xs font-medium text-on-surface-variant hover:text-primary transition-colors">Activos</button>
+<button class="px-4 py-1.5 rounded-md text-xs font-medium text-on-surface-variant hover:text-primary transition-colors">Inactivos</button>
 </div>
 <div class="relative">
-<select class="appearance-none bg-surface-container-low border-none text-xs font-semibold py-2.5 pl-4 pr-10 rounded-lg focus:ring-2 focus:ring-emerald-400">
-<option>Status: All</option>
-<option>Status: Active</option>
-<option>Status: Inactive</option>
-</select>
 </div>
 </div>
 
 <div class="flex items-center ">
 <button class="p-2.5 bg-surface-container-low text-on-surface-variant hover:text-primary rounded-lg transition-colors">
 <span class="material-symbols-outlined text-lg">filter_list</span>
+</button>
+<button class="p-2.5 bg-surface-container-low text-on-surface-variant hover:text-primary rounded-lg transition-colors">
+<span class="material-symbols-outlined text-lg">upload</span>
 </button>
 <button class="p-2.5 bg-surface-container-low text-on-surface-variant hover:text-primary rounded-lg transition-colors">
 <span class="material-symbols-outlined text-lg">download</span>
@@ -219,8 +201,8 @@
 <thead>
 <tr class="bg-surface-container-low">
 <th class="py-5 px-8 text-[11px] font-black uppercase tracking-widest text-on-surface-variant">Nombre</th>
-<th class="py-5 px-6 text-[11px] font-black uppercase tracking-widest text-on-surface-variant">Categoria</th>
-<th class="py-5 px-6 text-[11px] font-black uppercase tracking-widest text-on-surface-variant">Miembros</th>
+<th class="py-5 px-6 text-[11px] font-black uppercase tracking-widest text-on-surface-variant">Rol</th>
+<th class="py-5 px-6 text-[11px] font-black uppercase tracking-widest text-on-surface-variant">Unidad</th>
 <th class="py-5 px-6 text-[11px] font-black uppercase tracking-widest text-on-surface-variant">Status</th>
 <th class="py-5 px-8 text-[11px] font-black uppercase tracking-widest text-on-surface-variant text-right">Acciones</th>
 </tr>
@@ -231,21 +213,19 @@
 <td class="py-5 px-8">
 <div class="flex items-center gap-4">
 <div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary">
-<span class="material-symbols-outlined text-xl">fitness_center</span>
+<span class="material-symbols-outlined text-xl"><img src="./../public/mc.png" class="rounded-full" alt="" srcset=""></span>
 </div>
 <div>
-<p class="font-bold text-sm text-primary-container">Gimnasio NovaFit</p>
-<p class="text-xs text-on-surface-variant">Titular: Monica Cruz</p>
+<p class="font-bold text-sm text-primary-container">Monica Cruz</p>
 </div>
 </div>
 </td>
 <td class="py-5 px-6">
-<span class="px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed text-[10px] font-black uppercase rounded">Oficial</span>
+<span class="px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed text-[10px] font-black uppercase rounded">Admin</span>
 </td>
 <td class="py-5 px-6">
 <div class="flex items-center gap-2">
-<span class="font-bold text-sm">482</span>
-<span class="text-[10px] text-emerald-500 font-bold">+12</span>
+<span class="text-[10px]">Gimnasio NovaFit</span>
 </div>
 </td>
 <td class="py-5 px-6">
@@ -267,21 +247,19 @@
 <td class="py-5 px-8">
 <div class="flex items-center gap-4">
 <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600">
-<span class="material-symbols-outlined text-xl">scuba_diving</span>
+<span class="material-symbols-outlined text-xl"><img src="./../public/of.png" class="rounded-full" alt="" srcset=""></span>
 </div>
 <div>
-<p class="font-bold text-sm text-primary-container">Club Aqua NovaFit</p>
-<p class="text-xs text-on-surface-variant">Titular: Olivia Flores</p>
+<p class="font-bold text-sm text-primary-container">Olivia Flores</p>
 </div>
 </div>
 </td>
 <td class="py-5 px-6">
-<span class="px-2.5 py-1 bg-surface-container-high text-on-surface-variant text-[10px] font-black uppercase rounded">Local</span>
+<span class="px-2.5 py-1 bg-surface-container-high text-on-surface-variant text-[10px] font-black uppercase rounded">ADMIN</span>
 </td>
 <td class="py-5 px-6">
 <div class="flex items-center gap-2">
-<span class="font-bold text-sm">124</span>
-<span class="text-[10px] text-on-surface-variant font-bold">0</span>
+<span class="text-[10px]">Club Aqua NovaFit</span>
 </div>
 </td>
 <td class="py-5 px-6">
@@ -303,21 +281,19 @@
 <td class="py-5 px-8">
 <div class="flex items-center gap-4">
 <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600">
-<span class="material-symbols-outlined text-xl">sports_tennis</span>
+<span class="material-symbols-outlined text-xl"><img src="./../public/bs.png" class="rounded-full" alt="" srcset=""></span>
 </div>
 <div>
-<p class="font-bold text-sm text-primary-container">Tennis Top NovaFit</p>
-<p class="text-xs text-on-surface-variant">Titular: Brigitte Sebastian</p>
+<p class="font-bold text-sm text-primary-container">Brigitte Sebastian</p>
 </div>
 </div>
 </td>
 <td class="py-5 px-6">
-<span class="px-2.5 py-1 bg-surface-container-high text-on-surface-variant text-[10px] font-black uppercase rounded">Local</span>
+<span class="px-2.5 py-1 bg-surface-container-high text-on-surface-variant text-[10px] font-black uppercase rounded">Admin</span>
 </td>
 <td class="py-5 px-6">
 <div class="flex items-center gap-2">
-<span class="font-bold text-sm">85</span>
-<span class="text-[10px] text-error font-bold">-4</span>
+<span class="text-[10px]">Tennis Top NovaFit</span>
 </div>
 </td>
 <td class="py-5 px-6">
@@ -339,21 +315,19 @@
 <td class="py-5 px-8">
 <div class="flex items-center gap-4">
 <div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary">
-<span class="material-symbols-outlined text-xl">sports_motorsports</span>
+<span class="material-symbols-outlined text-xl"><img src="./../public/sm.png" class="rounded-full" alt="" srcset=""></span>
 </div>
 <div>
-<p class="font-bold text-sm text-primary-container">Novafit Ride</p>
-<p class="text-xs text-on-surface-variant">Titular: Sandra Moreno</p>
+<p class="font-bold text-sm text-primary-container">Sandra Moreno</p>
 </div>
 </div>
 </td>
 <td class="py-5 px-6">
-<span class="px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed text-[10px] font-black uppercase rounded">Oficial</span>
+<span class="px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed text-[10px] font-black uppercase rounded">Admin</span>
 </td>
 <td class="py-5 px-6">
 <div class="flex items-center gap-2">
-<span class="font-bold text-sm">310</span>
-<span class="text-[10px] text-emerald-500 font-bold">+52</span>
+<span class="text-[10px]">Novafit Ride</span>
 </div>
 </td>
 <td class="py-5 px-6">
