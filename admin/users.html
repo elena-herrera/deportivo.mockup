@@ -88,35 +88,54 @@
 <p class="text-[10px] text-on-surface-variant uppercase tracking-widest mt-1">Plataforma Integral de Comunidades Deportivas</p>
 </div>
 <nav class="flex-1 space-y-2">
-
 <a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope font-semibold text-sm tracking-tight scale-95 active:scale-100 transition-transform" href="./index.html">
 <span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
-                Unidades deportivas
+  Unidades deportivas
 </a>
-<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope font-semibold text-sm tracking-tight scale-95 active:scale-100 transition-transform" href="#">
-<span class="material-symbols-outlined" data-icon="settings">settings</span>
-                Administración ▼
-            </a>
+<div class="menu-item">
+    <button class="menu-toggle flex items-center gap-3 px-3 py-2.5 rounded text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope font-semibold text-sm tracking-tight scale-95 active:scale-100 transition-transform">
+        <span class="flex items-center gap-3">
+            <span class="material-symbols-outlined">settings</span>
+                Administración
+        </span>
+        <span class="arrow">▼</span>
+    </button>
 
-<a class="flex items-center gap-3 px-3 py-2.5 rounded bg-slate-200 dark:bg-slate-800 text-[#d50f8c] border-l-4 border-[#d50f8c] font-bold font-manrope text-sm tracking-tight scale-95 active:scale-100 transition-transform" href="#">
-<span class="material-symbols-outlined" data-icon="group">group</span>
-                Usuarios
-            </a>
-<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope font-semibold text-sm tracking-tight scale-95 active:scale-100 transition-transform" href="#">
+    <!-- SUBMENÚ -->
+    <div class="submenu">
+        <a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope font-semibold text-sm tracking-tight scale-95 active:scale-100 transition-transform" href="./users.html">
+          <span class="material-symbols-outlined" data-icon="group">group</span>
+          Usuarios
+        </a>        
+        <a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope font-semibold text-sm tracking-tight scale-95 active:scale-100 transition-transform" href="#">
+          <span class="material-symbols-outlined">groups</span>Alumnos
+        </a>        
+        <a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope font-semibold text-sm tracking-tight scale-95 active:scale-100 transition-transform" href="#">
+        <span class="material-symbols-outlined">account_balance_wallet</span>Cuentas
+        </a> 
+        <a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope font-semibold text-sm tracking-tight scale-95 active:scale-100 transition-transform" href="#">
+        <span class="material-symbols-outlined">user_attributes</span>Prospectos        
+        </a>
+        <a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope font-semibold text-sm tracking-tight scale-95 active:scale-100 transition-transform" href="#">
+        <span class="material-symbols-outlined">workspaces</span>Proyectos
+        </a> 
+        <a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope font-semibold text-sm tracking-tight scale-95 active:scale-100 transition-transform" href="#">
+        <span class="material-symbols-outlined">payments</span>Gastos        
+        </a> 
+    </div>
+</div>
+
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope font-semibold text-sm tracking-tight scale-95 active:scale-100 transition-transform" href="./communities.html">
 <span class="material-symbols-outlined" data-icon="family_group">family_group</span>
                 Comunidades
 </a>
-<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope font-semibold text-sm tracking-tight scale-95 active:scale-100 transition-transform" href="#">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope font-semibold text-sm tracking-tight scale-95 active:scale-100 transition-transform" href="./events.html">
 <span class="material-symbols-outlined" data-icon="date_range">date_range</span>
                 Eventos
 </a>
 <a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope font-semibold text-sm tracking-tight scale-95 active:scale-100 transition-transform" href="#">
 <span class="material-symbols-outlined" data-icon="analytics">analytics</span>
                 Estadística y Reportes
-</a>
-<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-500 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors font-manrope font-semibold text-sm tracking-tight scale-95 active:scale-100 transition-transform" href="#">
-<span class="material-symbols-outlined" data-icon="upload_file">upload_file</span>
-                Importar
 </a>
 </nav>
 <div class="mt-auto pt-6 px-2 flex items-center gap-3">
